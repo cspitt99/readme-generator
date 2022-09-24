@@ -33,20 +33,75 @@ function renderLicenseSection(license) {
   }
   return `## License
   This application is licensed under ${renderLicenseLink(license)}.`
-
-
 }
+
+function renderTableOfContents(data) {
+  let output = "## Table of Contents\n"
+  if (data.installation) {
+    output += "- [Installation](#Installation)\n"
+  }
+  if (data.usage) {
+    output += "- [Usage](#Usage)\n"
+  }
+  if (data.license) {
+    output += "- [License](#License)\n"
+  }
+  if (data.contribution) {
+    output += "- [Contribution](#Contribution)\n"
+  }
+  if (data.test) {
+    output += "- [Test](#Test)\n"
+  }
+    output += "- [Questions](#Questions)\n"
+
+  return output
+}
+
+function renderInstallationSection(installation) {
+  if (!installation) {
+    return ""
+  }
+  return `## Installation
+  ${installation}`
+}
+
+function renderUsageSection(usage) {
+  
+}
+
+function renderContributionSection(contribution) {
+  
+}
+
+function renderTestInstructions(test) {
+  
+}
+
+function renderQuestionsSection(username,email) {
+  
+}
+
+
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `# ${data.title} ${renderLicenseBadge(data.license)}
 
+${data.description}
+
+${renderTableOfContents(data)}
+
+${renderInstallationSection(data.installation)}
+
+${renderUsageSection(data.usage)}
+
 ${renderLicenseSection(data.license)}
 
+${renderContributionSection(data.contribution)}
 
+${renderTestInstructions(data.test)}
 
-
-
+${renderQuestionsSection(data.username,data.email)}
 
 
 `;
