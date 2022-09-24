@@ -1,6 +1,6 @@
-# asd [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+# README Generator [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-asd
+This is a README Generator that will assist in creating READMEs for all my future projects.
 
 ## Table of Contents
 - [Installation](#Installation)
@@ -12,17 +12,28 @@ asd
 
 
 ## Installation
-  asd
+  The installation steps are as followed:
+1. Run npm i in the terminal
+2. Use node index to run the generator
 
-undefined
+## Usage
+  This should be used to generate READMEs and make the process more simplified
 
 ## License
   This application is licensed under [The MIT License](https://opensource.org/licenses/MIT).
 
-undefined
+## Contribution
+  cspitt99
 
-undefined
+## Test Instructions
+  Follow the installation instructions to test this application.
 
-undefined
+## Questions
+  If you have any questions, please contact me at:
+
+  Github: [cspitt99](https://github.com/cspitt99)
+
+  Email: [caitlinspittler99@gmail.com](mailto:caitlinspittler99@gmail.com)
+  
 
 

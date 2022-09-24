@@ -57,6 +57,7 @@ function renderTableOfContents(data) {
   return output
 }
 
+// TODO: Create a function to render sections for README
 function renderInstallationSection(installation) {
   if (!installation) {
     return ""
@@ -66,19 +67,35 @@ function renderInstallationSection(installation) {
 }
 
 function renderUsageSection(usage) {
-  
+  if (!usage) {
+    return ""
+  }
+  return `## Usage
+  ${usage}`
 }
 
 function renderContributionSection(contribution) {
-  
+  if (!contribution) {
+    return ""
+  }
+  return `## Contribution
+  ${contribution}`
 }
 
 function renderTestInstructions(test) {
-  
+  if (!test) {
+    return ""
+  }
+  return `## Test Instructions
+  ${test}`
 }
 
 function renderQuestionsSection(username,email) {
-  
+  return `## Questions
+  If you have any questions, please contact me at:\n
+  Github: [${username}](https://github.com/${username})\n
+  Email: [${email}](mailto:${email})
+  `
 }
 
 
