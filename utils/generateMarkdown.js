@@ -57,7 +57,7 @@ function renderTableOfContents(data) {
   return output
 }
 
-// TODO: Create a function to render sections for README
+// functions to render sections for README
 function renderInstallationSection(installation) {
   if (!installation) {
     return ""
@@ -100,7 +100,7 @@ function renderQuestionsSection(username,email) {
 
 
 
-// TODO: Create a function to generate markdown for README
+// functions to generate markdown for README
 function generateMarkdown(data) {
   return `# ${data.title} ${renderLicenseBadge(data.license)}
 
