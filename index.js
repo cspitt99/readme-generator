@@ -1,7 +1,8 @@
 const inquirer = require("inquirer")
+const fs = require("fs")
 const {generateMarkdown} = require("./utils/generateMarkdown")
 
-// TODO: Create an array of questions for user input
+// array of questions for user input
 const questions = [
     {
         name: "title",
@@ -51,15 +52,16 @@ const questions = [
     },
 ];
 
-// Title, description, installation instructions, usage information, contribution guidelines, and test instructions, license, Github Username, Email Address
-
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+    fs.writeFileSync(fileName, data)
+}
 
-// TODO: Create a function to initialize app
+// function to initialize app
 async function init() {
     const answers = await inquirer.prompt(questions)
-    console.log(answers)
+    const markdown = generateMarkdown(answers)
+    writeToFile("readme.md", markdown)
 }
 
 // Function call to initialize app
